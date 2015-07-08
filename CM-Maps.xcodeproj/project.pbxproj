@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		682921691B4CD688004E4049 /* data.plist in Resources */ = {isa = PBXBuildFile; fileRef = 682921681B4CD688004E4049 /* data.plist */; };
+		684F7DD11B483F6E0052EF64 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 684F7DD01B483F6E0052EF64 /* GoogleService-Info.plist */; };
 		B9D4D4F13AC103BCC7ACA610 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 100CBBB1C53EBDE50E024D8E /* libPods.a */; };
 		D117C90C1B3F021600C82D30 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D117C90B1B3F021600C82D30 /* main.m */; };
 		D117C90F1B3F021600C82D30 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D117C90E1B3F021600C82D30 /* AppDelegate.m */; };
@@ -32,6 +34,8 @@
 
 /* Begin PBXFileReference section */
 		100CBBB1C53EBDE50E024D8E /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		682921681B4CD688004E4049 /* data.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = data.plist; sourceTree = "<group>"; };
+		684F7DD01B483F6E0052EF64 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		96F50B4DC95EA6469F987CB1 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "CM-Maps/Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		D117C9061B3F021600C82D30 /* CM-Maps.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CM-Maps.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D117C90A1B3F021600C82D30 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -47,7 +51,7 @@
 		D117C9221B3F021600C82D30 /* CM-MapsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "CM-MapsTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D117C9271B3F021600C82D30 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D117C9281B3F021600C82D30 /* CM_MapsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CM_MapsTests.m; sourceTree = "<group>"; };
-		D117C9341B3F034A00C82D30 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
+		D117C9341B3F034A00C82D30 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		D1FE765B1B3F0A6600212136 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		DC01091D5A3D5268CE2680ED /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "CM-Maps/Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -127,9 +131,11 @@
 		D117C9091B3F021600C82D30 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				684F7DD01B483F6E0052EF64 /* GoogleService-Info.plist */,
 				D117C90A1B3F021600C82D30 /* Info.plist */,
 				D117C90B1B3F021600C82D30 /* main.m */,
 				D117C9341B3F034A00C82D30 /* Podfile */,
+				682921681B4CD688004E4049 /* data.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -251,8 +257,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				682921691B4CD688004E4049 /* data.plist in Resources */,
 				D117C9181B3F021600C82D30 /* Main.storyboard in Resources */,
 				D117C91D1B3F021600C82D30 /* LaunchScreen.xib in Resources */,
+				684F7DD11B483F6E0052EF64 /* GoogleService-Info.plist in Resources */,
 				D117C9351B3F034A00C82D30 /* Podfile in Resources */,
 				D117C91A1B3F021600C82D30 /* Images.xcassets in Resources */,
 			);

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>placeLatitude</key>
+	<array>
+		<string>20.674815</string>
+		<string>20.710549</string>
+		<string>20.677541</string>
+	</array>
+	<key>placeLongitude</key>
+	<array>
+		<string>-103.387295</string>
+		<string>-103.412525</string>
+		<string>-103.432751</string>
+	</array>
+	<key>placeTitle</key>
+	<array>
+		<string>Minerva</string>
+		<string>Andares</string>
+		<string>Galerias</string>
+	</array>
+	<key>placeSnippet</key>
+	<array>
+		<string>Av. Vallarta</string>
+		<string>Zapopan</string>
+		<string>Fashion Mall</string>
+	</array>
+</dict>
+</plist>

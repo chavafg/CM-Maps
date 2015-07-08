@@ -22,9 +22,13 @@
 	</array>
 	<key>placeSnippet</key>
 	<array>
-		<string>Av. Vallarta</string>
+		<string>AvVallarta</string>
 		<string>Zapopan</string>
-		<string>Fashion Mall</string>
+		<string>FashionMall</string>
 	</array>
+	<key>test</key>
+	<array/>
+	<key>testString</key>
+	<string>hi</string>
 </dict>
 </plist>

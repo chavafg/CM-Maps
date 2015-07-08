@@ -62,7 +62,7 @@ NSMutableArray          *maPlacesLng;
     NSError *error;
     NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES); //1
     NSString *documentsDirectory = [paths objectAtIndex:0]; //2
-    NSString *path = [documentsDirectory stringByAppendingPathComponent:@"	data.plist"]; //3
+    NSString *path = [documentsDirectory stringByAppendingPathComponent:@"data.plist"]; //3
     
     NSFileManager *fileManager = [NSFileManager defaultManager];
     
@@ -98,7 +98,7 @@ NSMutableArray          *maPlacesLng;
     [mapView removeFromSuperview];
     camera                      = [GMSCameraPosition cameraWithLatitude:mlatitude longitude:mlongitude zoom:14.0];
     mapView                     = [GMSMapView mapWithFrame:CGRectZero camera:camera];
-    mapView.frame               = CGRectMake(0, 60, self.view.frame.size.width, self.view.frame.size.height-60);
+    mapView.frame               = CGRectMake(0, 100, self.view.frame.size.width, self.view.frame.size.height-100);
     mapView.myLocationEnabled   = YES;
 
     [self.view addSubview:mapView];

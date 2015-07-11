@@ -16,10 +16,17 @@
 @property (strong, nonatomic) IBOutlet UITextField *latTextAdd;
 
 @property (strong, nonatomic) IBOutlet UITextField *longTextAdd;
+@property (strong, nonatomic) IBOutlet UITextField *placeText;
 
+@property (strong, nonatomic) IBOutlet UITextField *areaText;
 
+@property (strong, nonatomic) IBOutlet UITextField *latText;
+
+@property (strong, nonatomic) IBOutlet UITextField *longText;
 
 - (IBAction)addPlacePressed:(id)sender;
+
+- (IBAction)backPressed:(id)sender;
 
 
 @end

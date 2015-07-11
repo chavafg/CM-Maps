@@ -10,15 +10,17 @@
 #import <CoreLocation/CoreLocation.h>
 #import <Google/Analytics.h>
 
-@interface Start : UIViewController<CLLocationManagerDelegate>
+@interface Start : UIViewController<CLLocationManagerDelegate, UIPageViewControllerDataSource, UIPageViewControllerDelegate>
 @property (strong, nonatomic)   CLLocationManager   *locationManager;
 @property (strong, nonatomic)   CLLocation          *location;
 
 @property (strong, nonatomic) IBOutlet UILabel *countryLbl;
 @property (strong, nonatomic) IBOutlet UILabel *placeLbl;
 
-- (IBAction)listPlacePressed:(id)sender;
+
 - (IBAction)addPlacePressed:(id)sender;
+- (IBAction)listPlacesPressed:(id)sender;
+
 
 @end
 

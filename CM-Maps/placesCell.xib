@@ -39,6 +39,12 @@
                     </label>
                 </subviews>
             </tableViewCellContentView>
+            <connections>
+                <outlet property="areaLblCell" destination="Uzf-Wn-8qU" id="xTD-jR-hgx"/>
+                <outlet property="latLblCell" destination="zmP-vl-G2W" id="UYu-uk-ZSg"/>
+                <outlet property="longLblCell" destination="0O6-pQ-Y38" id="NlH-nz-ZDU"/>
+                <outlet property="placeLblCell" destination="GGS-eU-BgY" id="T2y-Zf-UOv"/>
+            </connections>
         </tableViewCell>
     </objects>
 </document>

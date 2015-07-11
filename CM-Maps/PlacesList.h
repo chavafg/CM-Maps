@@ -10,4 +10,10 @@
 
 @interface PlacesList : UIViewController
 
+
+- (IBAction)goMapPressed:(id)sender;
+- (IBAction)addPlacePressed:(id)sender;
+
+
+
 @end

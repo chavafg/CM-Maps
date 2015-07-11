@@ -10,6 +10,7 @@
 @import GoogleMaps;
 #import "NewPlaces.h"
 #import "PlacesList.h"
+#import "placesCell.h"
 
 #define         nLocalizing     0
 #define         nLocalized      1
@@ -169,13 +170,17 @@ NSMutableArray          *maPlacesLng;
     }];
     
 }
-- (IBAction)listPlacePressed:(id)sender {
-    PlacesList *viewController = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"PlacesList"];
-    [self presentViewController:viewController animated:YES completion:nil];
-}
+
+
 
 - (IBAction)addPlacePressed:(id)sender {
     NewPlaces *viewController = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"NewPlaces"];
     [self presentViewController:viewController animated:YES completion:nil];
 }
+
+- (IBAction)listPlacesPressed:(id)sender {
+    PlacesList *viewController = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"PlacesList"];
+    [self presentViewController:viewController animated:YES completion:nil];
+}
+
 @end

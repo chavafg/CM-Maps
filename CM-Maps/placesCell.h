@@ -10,4 +10,11 @@
 
 @interface placesCell : UITableViewCell
 
+
+@property (strong, nonatomic) IBOutlet UILabel *placeLblCell;
+@property (strong, nonatomic) IBOutlet UILabel *areaLblCell;
+@property (strong, nonatomic) IBOutlet UILabel *latLblCell;
+@property (strong, nonatomic) IBOutlet UILabel *longLblCell;
+
+
 @end

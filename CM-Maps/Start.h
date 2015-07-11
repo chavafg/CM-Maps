@@ -17,6 +17,8 @@
 @property (strong, nonatomic) IBOutlet UILabel *countryLbl;
 @property (strong, nonatomic) IBOutlet UILabel *placeLbl;
 
+- (IBAction)listPlacePressed:(id)sender;
+- (IBAction)addPlacePressed:(id)sender;
 
 @end
 

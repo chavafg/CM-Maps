@@ -11,6 +11,8 @@
 #import "NewPlaces.h"
 #import "PlacesList.h"
 #import "placesCell.h"
+#import "Declarations.h"
+#import <Google/Analytics.h>
 
 #define         nLocalizing     0
 #define         nLocalized      1
@@ -20,10 +22,7 @@ float                   mlatitude;
 float                   mlongitude;
 static int              iLocalizeState = nLocalizing;
 
-NSMutableArray          *maPlacesTitle;
-NSMutableArray          *maPlacesSnippet;
-NSMutableArray          *maPlacesLat;
-NSMutableArray          *maPlacesLng;
+
 
 
 @implementation Start {
@@ -55,37 +54,36 @@ NSMutableArray          *maPlacesLng;
 }
 - (void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
-    id<GAITracker> tracker = [[GAI sharedInstance] defaultTracker];
-    [tracker set:kGAIScreenName value:@"CM-Maps:Start"];
-    [tracker send:[[GAIDictionaryBuilder createScreenView] build]];
+    //id<GAITracker> tracker = [[GAI sharedInstance] defaultTracker];
+    //[tracker set:kGAIScreenName value:@"CM-Maps:Start"];
+    //[tracker send:[[GAIDictionaryBuilder createScreenView] build]];
 }
 //------------------------------------------------------------
 - (void)initPlaces {
     //Get data from data.plist
     NSError *error;
-    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES); //1
-    NSString *documentsDirectory = [paths objectAtIndex:0]; //2
-    NSString *path = [documentsDirectory stringByAppendingPathComponent:@"data.plist"]; //3
-    
-    NSFileManager *fileManager = [NSFileManager defaultManager];
+    paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES); //1
+    documentsDirectory = [paths objectAtIndex:0]; //2
+    path = [documentsDirectory stringByAppendingPathComponent:@"list.plist"]; //3
+    fileManager = [NSFileManager defaultManager];
     
     if (![fileManager fileExistsAtPath: path]) //4
     {
-        NSString *bundle = [[NSBundle mainBundle] pathForResource:@"data"ofType:@"plist"]; //5
+        NSString *bundle = [[NSBundle mainBundle] pathForResource:@"list"ofType:@"plist"]; //5
         
         [fileManager copyItemAtPath:bundle toPath: path error:&error]; //6
     }
     
-    NSMutableDictionary *savedPlaces = [[NSMutableDictionary alloc] initWithContentsOfFile: path];
-    NSLog(@"savedPlaces = %@", savedPlaces);
-    maPlacesLat     = [savedPlaces objectForKey:@"placeLatitude"];
+    placesInList = [[NSMutableDictionary alloc] initWithContentsOfFile: path];
+    NSLog(@"placesInList = %@", placesInList);
+    maPlacesLat     = [placesInList objectForKey:@"placeLatitude"];
     NSLog(@"placesLat = %@", maPlacesLat);
-    maPlacesLng     = [savedPlaces objectForKey:@"placeLongitude"];
-    NSLog(@"placesLat = %@", maPlacesLng);
-    maPlacesTitle   = [savedPlaces objectForKey:@"placeTitle"];
-    NSLog(@"placesLat = %@", maPlacesLng);
-    maPlacesSnippet = [savedPlaces objectForKey:@"placeSnippet"];
-    NSLog(@"placesLat = %@", maPlacesLng);
+    maPlacesLng     = [placesInList objectForKey:@"placeLongitude"];
+    NSLog(@"placeLongitude = %@", maPlacesLng);
+    maPlacesTitle   = [placesInList objectForKey:@"placeTitle"];
+    NSLog(@"placeTitle = %@", maPlacesTitle);
+    maPlacesSnippet = [placesInList objectForKey:@"placeSnippet"];
+    NSLog(@"placeSnippet = %@", maPlacesSnippet);
 
     //maPlacesLat     = [[NSMutableArray alloc] initWithObjects: @"20.674815", @"20.710549",@"20.677541",@"20.682093", nil];
     //maPlacesLng     = [[NSMutableArray alloc] initWithObjects: @"-103.387295", @"-103.412525",@"-103.432751",@"-103.462570", nil];
